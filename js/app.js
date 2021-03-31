@@ -1,4 +1,3 @@
-'use strict'
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".carousel-container").forEach((carousel) => {
     insertNumbers(carousel);
@@ -39,20 +38,6 @@ function insertNumbers(carousel) {
   }
 }
 
-//   function insertDots(carousel) {
-//     const dots = document.createElement("div");
-//     dots.classList.add("dots");
-
-//     carousel.append(dots);
-
-//     carousel.querySelectorAll(".item").forEach((elem) => {
-//       const dot = document.createElement("div");
-//       dot.classList.add("dot");
-
-//       carousel.querySelector(".dots").append(dot);
-//     });
-//   }
-
 function plusItem(carousel) {
   let item = currentItem(carousel);
 
@@ -82,10 +67,6 @@ function showItems(carousel, item) {
     carousel.querySelectorAll(".item")[currentItem(carousel)].style.display =
       "none";
   carousel.querySelectorAll(".item")[item].style.display = "block";
-
-  // if (carousel.querySelector(".dot.active") != null)
-  //   carousel.querySelector(".dot.active").classList.remove("active");
-  // carousel.querySelectorAll(".dot")[item].classList.add("active");
 }
 
 
@@ -94,39 +75,4 @@ var slideMoveTime = 5000;
 setInterval(function () {
   plusItem(document.querySelector(".carousel-container"))
 }, slideMoveTime);
-
-
-// ASK FOR LOCATION
-let longitude;
-
-function geoFindMe() {
-  //document.querySelector('#location').preventDefault();
-  // const status = document.querySelector('#status');
-  // const mapLink = document.querySelector('#map-link');
-  // mapLink.href = '';
-  // mapLink.textContent = '';
-
-  function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-
-    // status.textContent = '';
-    // mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-    // mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
-    console.log(`Latitude: ${latitude} °, Longitude: ${longitude} °`)
-  }
-
-  function error() {
-    // status.textContent = 'Unable to retrieve your location';
-  }
-
-  if (!navigator.geolocation) {
-    // status.textContent = 'Geolocation is not supported by your browser';
-  } else {
-    // status.textContent = 'Locating…';
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-
-}
-
 

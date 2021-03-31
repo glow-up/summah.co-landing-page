@@ -16,6 +16,12 @@ body {
   margin: 0;
 }
 
+@media only screen and (max-width: 350px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
 main section {
   width: 100%;
   min-height: 100vh;
@@ -27,6 +33,12 @@ main section {
 @media only screen and (min-width: 720px) {
   main section {
     padding: 1.5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  main section {
+    height: 100%;
   }
 }
 
@@ -211,8 +223,8 @@ main section .carousel-container .item .text .title {
 
 #popup .close-icon {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 50%;
   cursor: pointer;
   -webkit-transition: -webkit-transform 200ms ease;
   transition: -webkit-transform 200ms ease;
