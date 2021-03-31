@@ -166,7 +166,7 @@ $white: #ffffff;
     justify-content: center;
     align-items: center;
     border-radius: 0;
-    padding: 15px 20px;
+    padding: 20px 20px;
     background: $white;
     transition: background-color 200ms ease;
     color: rgb(39, 39, 39);
@@ -205,7 +205,7 @@ $white: #ffffff;
     align-items: center;
     position: absolute;
     border-radius: 0;
-    max-width: 500px;
+    max-width: 450px;
     width: auto;
     min-width: 350px;
     top: 50%;
@@ -241,7 +241,8 @@ $white: #ffffff;
 
         color: rgb(39, 39, 39);
         font-family: Archivo, serif;
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 110%;
         font-style: 400;
         text-shadow: rgba(140, 140, 140, 0.004) 1px 1px 1px;
         // A FIX FOR IE 
@@ -254,6 +255,7 @@ $white: #ffffff;
         right: 15px;
         cursor: pointer;
         transition: transform 200ms ease;
+        text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
 
         &:hover {
             transform: rotate(2deg) scale(1.1);
@@ -275,19 +277,23 @@ $white: #ffffff;
 
     .cta-container {
         margin-top: 30px;
-        display: flex;
-        flex-direction: row;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
 
-        .cta-primary:nth-child(1) {
-                       margin: 0 0 20px;
+        .cta-primary {
+            margin: 0 0 10px;
         }
 
         >a {
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            display: block;
+
+            &.location-ask {
+                text-transform: none;
+                font-style: italic;
+                color: rgb(33, 33, 33);
+                margin-top: 30px;
+            }
         }
     }
 }
