@@ -130,6 +130,10 @@ $white: #ffffff;
         margin-right: 15px;
         transition: margin 200ms ease;
     }
+    img {
+        width: 25px;
+        height: auto;
+    }
 
     &:hover,
     &:active {

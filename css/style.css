@@ -138,6 +138,11 @@ main section .carousel-container .item .text .title {
   transition: margin 200ms ease;
 }
 
+.cta-primary img {
+  width: 25px;
+  height: auto;
+}
+
 .cta-primary:hover, .cta-primary:active {
   background: #e0d8ce;
   color: #ffffff;
