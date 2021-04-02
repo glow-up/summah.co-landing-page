@@ -36,12 +36,6 @@ main section {
   }
 }
 
-@media only screen and (max-width: 350px) {
-  main section {
-    height: 100%;
-  }
-}
-
 main section .lx-container-80 {
   height: 100%;
 }
@@ -134,6 +128,12 @@ main section .carousel-container .item .text .title {
   text-transform: uppercase;
   letter-spacing: 1.3px;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 761px) {
+  .cta-primary {
+    padding: 20px 20px 20px 25%;
+  }
 }
 
 .cta-primary > :nth-child(1) {
