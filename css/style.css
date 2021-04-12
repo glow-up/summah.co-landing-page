@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f2efeb;
   background-image: linear-gradient(62deg, #ffffff 0%, #f2efeb 100%);
   overflow-y: hidden;
   padding: 0;
@@ -112,15 +112,15 @@ main section .carousel-container .item .text .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 0;
-  padding: 20px 20px 20px 20%;
-  background: #ffffff;
+  padding: 20px 50px;
+  background: #ede9e6;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
   color: #272727;
@@ -132,7 +132,7 @@ main section .carousel-container .item .text .title {
 
 @media only screen and (min-width: 761px) {
   .cta-primary {
-    padding: 20px 20px 20px 25%;
+    padding: 25px 50px;
   }
 }
 
@@ -143,7 +143,10 @@ main section .carousel-container .item .text .title {
 }
 
 .cta-primary img {
-  width: 25px;
+  -webkit-transition: margin-right 200ms ease;
+  transition: margin-right 200ms ease;
+  margin-right: 5%;
+  width: 20px;
   height: auto;
 }
 
@@ -152,18 +155,18 @@ main section .carousel-container .item .text .title {
   color: #ffffff;
 }
 
-.cta-primary:hover > :nth-child(1), .cta-primary:active > :nth-child(1) {
-  margin-right: 25px;
+.cta-primary:hover img, .cta-primary:active img {
+  margin-right: 0%;
 }
 
 .cta-primary:focus {
-  outline: 1px solid red;
+  outline: 1px solid #ddd1ca;
 }
 
 #popup {
   text-align: center;
-  background: #f2efeb;
-  padding: 50px 60px 30px;
+  background: #f7f4f2;
+  padding: 50px 30px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,8 +206,6 @@ main section .carousel-container .item .text .title {
 }
 
 #popup.hover {
-  -webkit-filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
   -webkit-transform: translateX(-50%) translateY(-50%) scale(1.005);
           transform: translateX(-50%) translateY(-50%) scale(1.005);
   -webkit-transition-delay: 150ms;
@@ -223,8 +224,8 @@ main section .carousel-container .item .text .title {
 #popup p {
   color: #272727;
   font-family: Archivo, serif;
-  font-size: 15px;
-  line-height: 110%;
+  font-size: 16px;
+  line-height: 180%;
   font-style: 400;
   text-shadow: rgba(140, 140, 140, 0.004) 1px 1px 1px;
   max-width: 100%;
@@ -251,18 +252,19 @@ main section .carousel-container .item .text .title {
   margin-bottom: 0;
   color: #212121;
   font-family: Archivo, serif;
-  font-size: 22px;
+  font-size: 24px;
   font-style: 400;
   font-weight: 400;
   letter-spacing: 0.5px;
-  line-height: 25px;
+  line-height: 20px;
   text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
   text-transform: uppercase;
 }
 
 #popup .cta-container {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
+  font-size: 15px;
 }
 
 #popup .cta-container .cta-primary {
@@ -272,10 +274,11 @@ main section .carousel-container .item .text .title {
 #popup .cta-container > a {
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  display: block;
 }
 
 #popup .cta-container > a.location-ask {
+  display: block;
+  text-align: center;
   text-transform: none;
   font-style: italic;
   color: #212121;
