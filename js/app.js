@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".carousel-container").forEach((carousel) => {
-    insertNumbers(carousel);
+    // insertNumbers(carousel);
 
     carousel.querySelector(".prev").addEventListener("click", (e) => {
       minusItem(carousel);
@@ -27,16 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function insertNumbers(carousel) {
-  const length = carousel.querySelectorAll(".item").length;
-  for (let i = 0; i < length; i++) {
-    const nmbr = document.createElement("div");
-    nmbr.classList.add("numbertext");
-    nmbr.innerText = i + 1 + " / " + length;
+// function insertNumbers(carousel) {
+//   const length = carousel.querySelectorAll(".item").length;
+//   for (let i = 0; i < length; i++) {
+//     const nmbr = document.createElement("div");
+//     nmbr.classList.add("numbertext");
+//     nmbr.innerText = i + 1 + " / " + length;
 
-    carousel.querySelectorAll(".item")[i].append(nmbr);
-  }
-}
+//     carousel.querySelectorAll(".item")[i].append(nmbr);
+//   }
+// }
 
 function plusItem(carousel) {
   let item = currentItem(carousel);
