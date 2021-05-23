@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-body {
+#body {
     background-color: #f2efeb;
     background-image: linear-gradient(62deg, #ffffff 0%, #f2efeb 100%);
     overflow-y: hidden;
@@ -20,6 +20,10 @@ body {
     @media only screen and (max-width: 350px) {
         overflow-y: auto;
     }
+}
+
+#embed-container{
+background: #00000079;
 }
 
 main {
